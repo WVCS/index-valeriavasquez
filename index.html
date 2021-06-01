@@ -1,73 +1,134 @@
 <html>
 
   
-  
-  <body>
-  
-     <ul class="nav">
-  <li class="nav"><a href="index.html">Home</a></li>
-  <li class="nav"><a href="noun.html">Noun Project</a></li>
-  <li class="nav"><a href="convince/home.html">Convince</a></li>
-       <li class="nav"><a href="food/home.html">Tibble Tea</a></li>
-       <li class="nav"><a href="event/home.html">NYFW</a></li>
-       <li class="nav"><a href="amusement/home.html">MouseWorld</a></li>
-        <li class="nav"><a href="store/home.html">Zaruh</a></li>
-       
-
-
-       
-</ul>
-    
-      <link rel="stylesheet" href="style.css">
-    
- <div>   
-    <h1> Valeria's Website  </h1>
+<div class="toggle">
+        <a><i class="fa fa-bars"></i></a>
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="noun.html">Noun Project</a></li>
+            <li><a href="index.html">Home</a></li>
+          
+          <li><a href="convince/home.html">Convince</a></li>
+          
+          <li><a href="food/home.html">Tibble Tea</a></li>
+          
+          <li><a href="event/home.html">NYFW</a></li>
+          
+             <li><a href="amusement/home.html">MouseWorld</a></li>
+          
+             <li><a href="store/home.html">Zaruh</a></li>
+          
+           
+        </ul>
     </div>
 
-       <br>
+<header>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=outline">  
+</header>
+
+<h1 class="font-effect-neon">Welcome to Valeria's Website</h1>
   
-  <img src="Home logo.png" class="center">
   
-  
-  </body>    
-  
-  
-<!------------------------------------------------------Style start------------------->  
   
   <style>
-body {
-  background-color: #FFD5C2;
+    
+    body{
+    margin: 0;
+    padding: 0;
+    background: #cb997e;
+  text-align: center;
 }
-  
-    
-  h1 {
-font-family: sans-serif;
-color: #F7993A;
-text-align: center;  
+.toggle{
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    z-index: 2
 }
+.toggle a{
+    text-decoration: none;
+    color: #ddbea9;
+    font-size: 24px;
+    cursor: pointer;
+}
+.menu{
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+    z-index: 1;
+    transition: 0.5s;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+ul li{
+    list-style: none;
+}
+
+ul li a{
+    padding: 10px;
+    display: inline-block;
+    font-family: verdana;
+    font-size: 2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ddbea9;
+}
+ul li a:hover{
+   
+    text-effects: underline;
+  color: #cb997e;
+  font-size: 35px;
+  text-align: center;
+  transition-duration: 0.7s;
+}
+.menu.active{
+    left: 0;
+    overflow: auto;
+  background: #fff1e6;
+}
+
+
+
+@font-face {
+  font-family: 'Sofia';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/sofia/v9/8QIHdirahM3j_su5uI0Orbjl.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+.font-effect-neon {
+  text-shadow: 0 0 0.1em #ddbea9, 0 0 0.2em #ddbea9, 0 0 0.3em #ddbea9, 0 0 0.4em #ddbea9,0 0 0.6em #ddbea9, 0 0 0.8em #ddbea9, 0 0 1.0em #ddbea9, 0 0 1.2em #ddbea9;
+  color: white;
+  font-size: 60px;
+}
+
+    
+  </style>
+
   
-    a {
-      text-decoration: none;
-      color: antiquewhite;
+  
+  <script>
+   
+    $(document).ready(function(){
+            $('.toggle').click(function(){
+                $('.menu').toggleClass('active');
+            });
+        });
     
-    }
-    
-  .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
-    
- 
-    
-    
-    
-    
-</style>
-
-
-
+  </script>
+  
 
 </html>
 
