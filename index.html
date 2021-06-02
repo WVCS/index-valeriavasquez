@@ -1,7 +1,7 @@
 <html>
- 
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
  
   
@@ -10,12 +10,9 @@
   <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="overlay-content">
-   
-   <a href="index.html">Home</a>
-   
-   <a href="noun.html">Noun Project</a>
+       <a href="noun.html">Noun Project</a>
     
-      
+        <a href="index.html">Home</a>
           
           <a href="convince/home.html">Convince</a>
           
@@ -36,12 +33,31 @@
 
 <span style="font-size:30px;cursor:pointer;color:#ddbea9;" onclick="openNav()">&#9776; </span>
 
- 
+  </body>
+  
+<br>
 
-</body>
+<article>
+  <section>
+    <h1>Article Title</h1>
+    <p>Sed autem necessitatibus quibusdam rerum suscipit aspernatur. Aut voluptatem animi rerum vero et et. Explicabo vel pariatur dolorem voluptas blanditiis quia magni eos. Ab temporibus nam tempora.</p>
+    <p>Pariatur consequatur blanditiis voluptatem. Error in esse temporibus quia. Perferendis molestiae velit deleniti deserunt. Provident qui ullam adipisci optio. Molestias similique et deserunt sint molestias autem non autem. Nemo itaque repellat assumenda nostrum qui eos porro dolorum.</p>
+  </section>
+  <figure>
+    <img src="http://via.placeholder.com/1500x450?text=Image">
+  </figure>
+  <section>
+    <p>Ea a assumenda rerum. Omnis ut voluptatem asperiores eius omnis laborum et. Pariatur et eos expedita eos sint modi est ut. Rerum molestiae magni quasi dolorum consequatur harum molestiae. Aut sunomnis atque deserunt molestiae. Repellendus aut unde impedit fugiat quia qui.</p>
+    <p>Saepe voluptas officia corporis sed. Consequatur nam aperiam enim necessitatibus non doloribus quis ullam. Qui aut quisquam voluptatem neque quidem harum.</p>
+    <p>Sed autem necessitatibus quibusdam rerum suscipit aspernatur. Aut voluptatem animi rerum vero et et. Explicabo vel pariatur dolorem voluptas blanditiis quia magni eos. Ab temporibus nam tempora.</p>
+    <p>Pariatur consequatur blanditiis voluptatem. Error in esse temporibus quia. Perferendis molestiae velit deleniti deserunt. Provident qui ullam adipisci optio. Molestias similique et deserunt sint molestias autem non autem. Nemo itaque repellat assumenda nostrum qui eos porro dolorum.</p>
+  </section>
+</article>
+
+
   
 <style>
-  
+
 body {
   display: inline-block;
     font-family: verdana;
@@ -108,6 +124,42 @@ color: #fff1e6;
 
 
 
+
+
+article {
+  display: grid;
+  grid-template-columns: 
+    [full-start] minmax(1em, 1fr) 
+    [main-start] minmax(0, 56em) [main-end]
+    minmax(1em, 1fr) [full-end];
+  grid-gap: 1em;
+}
+
+section {
+  grid-column: main;
+}
+
+figure {
+  grid-column: full;
+}
+
+/* Demo Specific Styles */
+body {
+  padding: 2em 0;
+}
+
+article > * {
+  background-color: #eaeaea;
+  padding: 2em;
+}
+
+figure {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
 
 </style>
   
