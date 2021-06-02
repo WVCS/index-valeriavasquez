@@ -1,134 +1,127 @@
 <html>
+ 
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
+ 
   
-<div class="toggle">
-        <a><i class="fa fa-bars"></i></a>
-    </div>
-    <div class="menu">
-        <ul>
-            <li><a href="noun.html">Noun Project</a></li>
-            <li><a href="index.html">Home</a></li>
-          
-          <li><a href="convince/home.html">Convince</a></li>
-          
-          <li><a href="food/home.html">Tibble Tea</a></li>
-          
-          <li><a href="event/home.html">NYFW</a></li>
-          
-             <li><a href="amusement/home.html">MouseWorld</a></li>
-          
-             <li><a href="store/home.html">Zaruh</a></li>
-          
-           
-        </ul>
-    </div>
+</head>
 
-<header>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=outline">  
-</header>
-
-<h1 class="font-effect-neon">Welcome to Valeria's Website</h1>
-  
-  
-  
-  <style>
+  <div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+       <a href="noun.html">Noun Project</a>
     
-    body{
-    margin: 0;
-    padding: 0;
-    background: #cb997e;
-  text-align: center;
-}
-.toggle{
-    position: fixed;
-    top: 40px;
-    left: 40px;
-    z-index: 2
-}
-.toggle a{
-    text-decoration: none;
-    color: #ddbea9;
-    font-size: 24px;
-    cursor: pointer;
-}
-.menu{
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: #FFF;
-    z-index: 1;
-    transition: 0.5s;
-}
-ul{
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-ul li{
-    list-style: none;
-}
+        <a href="index.html">Home</a>
+          
+          <a href="convince/home.html">Convince</a>
+          
+       <a href="food/home.html">Tibble Tea</a>
+          
+          <a href="event/home.html">NYFW</a>
+          
+             <a href="amusement/home.html">MouseWorld</a>
+          
+             <a href="store/home.html">Zaruh</a>
+  </div>
+</div>
 
-ul li a{
-    padding: 10px;
-    display: inline-block;
+  
+
+<h2>Welcome to Valeria's Website</h2>
+
+
+<span style="font-size:30px;cursor:pointer;color:#ddbea9;" onclick="openNav()">&#9776; </span>
+
+ 
+
+</body>
+  
+<style>
+  
+body {
+  display: inline-block;
     font-family: verdana;
-    font-size: 2em;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #ddbea9;
+   background: #cb997e;
+color: #ddbea9;
+   text-transform: uppercase;
+
 }
-ul li a:hover{
-   
-    text-effects: underline;
-  color: #cb997e;
-  font-size: 35px;
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff1e6;
+  background-color: #fff1e6;
+  overflow-x: hidden;
+  transition: 0.9s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
   text-align: center;
-  transition-duration: 0.7s;
-}
-.menu.active{
-    left: 0;
-    overflow: auto;
-  background: #fff1e6;
+  margin-top: 30px;
 }
 
-
-
-@font-face {
-  font-family: 'Sofia';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/sofia/v9/8QIHdirahM3j_su5uI0Orbjl.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #ddbea9;
+  display: block;
+  transition: 0.9s;
 }
-.font-effect-neon {
-  text-shadow: 0 0 0.1em #ddbea9, 0 0 0.2em #ddbea9, 0 0 0.3em #ddbea9, 0 0 0.4em #ddbea9,0 0 0.6em #ddbea9, 0 0 0.8em #ddbea9, 0 0 1.0em #ddbea9, 0 0 1.2em #ddbea9;
-  color: white;
+
+.overlay a:hover, .overlay a:focus {
+  color: #BF805F;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
   font-size: 60px;
 }
 
-    
-  </style>
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
 
+h2 {
+color: #fff1e6;
+  text-align: center;
+}
+
+
+
+
+</style>
   
+
+<script>
   
-  <script>
-   
-    $(document).ready(function(){
-            $('.toggle').click(function(){
-                $('.menu').toggleClass('active');
-            });
-        });
-    
-  </script>
-  
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+
+     
+</script>
+
 
 </html>
 
